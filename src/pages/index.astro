@@ -1,12 +1,29 @@
 ---
 
-import Layout from '../layouts/Layout.astro';
-
+import Layout from '@/layouts/Layout.astro';
+import HeroKeyLogo from "@/assets/hero-key-logo.webp"
+import HeroKeyBackground from "@/assets/hero-key-background.webp";
 ---
 
 <Layout>
   <section>
-    <h1>Landing GTA VI</h1>
+    <picture
+      id="hero-key"
+      class="h-screen scale-125 block overflow-hidden fixed"
+    >
+      <img 
+        src={HeroKeyLogo.src} 
+        alt="key logo"
+        id="hero-key-logo"
+        class="absolute w-full h-full object-cover"
+      >
+      <img 
+        src={HeroKeyBackground.src} 
+        alt="key background"
+        id="hero-key-background"
+        class="w-full h-full object-cover"
+      >
+    </picture>
   </section>
 
 
